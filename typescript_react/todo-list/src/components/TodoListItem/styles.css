@@ -1,0 +1,30 @@
+.todo-list-item {
+  display: flex;
+}
+
+.todo-content-container {
+  flex: 1;
+  margin-left: 10px;
+}
+
+.correction-icon {
+  cursor: pointer;
+  font-size: 20px;
+  margin-right: 15px;
+}
+
+.delete-icon {
+  cursor: pointer;
+  font-size: 20px;
+  margin-right: 12px;
+  color: red;
+}
+
+.delete-icon:hover {
+  color: rgb(228, 0, 0);
+}
+
+.checked {
+  text-decoration: line-through;
+  color: rgb(153, 153, 153);
+}

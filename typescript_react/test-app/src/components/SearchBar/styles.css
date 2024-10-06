@@ -1,0 +1,52 @@
+:root {
+  --icon-color: white;
+  --icon-background-color: #717171;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  flex: 0 1 732px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background: transparent;
+  padding: 0 4px 0 16px;
+  border: 1px solid hsl(0, 0%, 18.82%);
+  border-radius: 40px 0 0 40px;
+}
+
+.search-input {
+  border: none;
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  height: auto;
+  outline: none;
+  background: transparent;
+  color: white;
+}
+
+.search-button {
+  background-color: var(--icon-background-color);
+  border-radius: 0 40px 40px 0;
+  cursor: pointer;
+  height: 40px;
+  width: 64px;
+  margin: 0;
+}
+
+.search-icon {
+  color: var(--icon-color);
+}
+
+.voice-icon {
+  color: var(--icon-color);
+  background-color: var(--icon-background-color);
+  border-radius: 100%;
+  font-size: 1.5rem;
+  padding: 8px;
+}

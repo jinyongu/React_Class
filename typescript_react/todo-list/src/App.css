@@ -1,0 +1,13 @@
+#root {
+  border-radius: 4px;
+}
+
+.App {
+  margin: 0 auto;
+  margin-top: 100px;
+  width: 500px;
+  background-color: rgb(213, 211, 211);
+  padding-bottom: 2px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}

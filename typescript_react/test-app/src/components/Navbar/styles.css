@@ -1,0 +1,7 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(0.25turn, #282828, #0f0f0f);
+  padding: 0 16px;
+}

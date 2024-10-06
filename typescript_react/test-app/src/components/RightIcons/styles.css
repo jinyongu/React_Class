@@ -1,0 +1,24 @@
+:root {
+  --icon-color: white;
+}
+
+.right-icons {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+}
+
+.upload-icon {
+  color: var(--icon-color);
+  font-size: 1.5rem;
+}
+
+.notification-icon {
+  color: var(--icon-color);
+  font-size: 1.5rem;
+}
+
+.profile-icon {
+  color: var(--icon-color);
+  font-size: 1.5rem;
+}

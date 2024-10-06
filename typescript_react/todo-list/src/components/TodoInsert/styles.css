@@ -1,0 +1,31 @@
+.todo-insert {
+  display: flex;
+}
+
+.todo-input-container {
+  width: 100%;
+}
+
+.todo-input {
+  width: 100%;
+  padding: 15px 0;
+  padding-left: 10px;
+  box-sizing: border-box;
+  background-color: rgb(39, 39, 39);
+  color: rgb(153, 153, 153);
+  border: none;
+}
+
+.todo-add-button {
+  background-color: rgb(153, 153, 153);
+  color: white;
+  padding: 15px 20px;
+  cursor: pointer;
+  border-color: white;
+  border: none;
+  font-weight: bold;
+}
+
+.todo-add-button:hover {
+  background-color: rgb(132, 132, 132);
+}

@@ -1,0 +1,21 @@
+.login-page {
+  display: flex;
+  flex-direction: column;
+  width: 180px;
+  margin: auto;
+  margin-top: 240px;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.id-input-form,
+.passwd-input-form {
+  position: relative;
+}
+
+.user-icon,
+.passwd-icon {
+  position: absolute;
+  left: 0;
+  bottom: 14px;
+}
