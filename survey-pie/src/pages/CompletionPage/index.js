@@ -1,3 +1,4 @@
+import axios from 'axios';
 import { useRecoilValue } from 'recoil';
 import styled from 'styled-components';
 
@@ -7,12 +8,13 @@ import testWithComma from '../../stores/test/testWithComma';
 function CompletionPage() {
   const test = useRecoilValue(testWithComma);
 
+  axios.get('http://localhost:3000').then((res) => {
+    console.log('res', res);
+  });
+
   return <CompletionPageWrapper>{test}</CompletionPageWrapper>;
 }
 
-const CompletionPageWrapper = styled.div`
-  background: aqua;
-  padding: 4em;
-`;
+const CompletionPageWrapper = styled.div``;
 
 export default CompletionPage;
