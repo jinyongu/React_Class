@@ -63,6 +63,34 @@ function KakaoMap() {
       });
   }, []);
 
+  // useEffect(() => {
+  //   fetch("https://ipapi.co/json/")
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       setLocation({
+  //         latitude: data.latitude,
+  //         longitude: data.longitude,
+  //       });
+  //     })
+  //     .catch((error) => {
+  //       console.error("Error retrieving location:", error);
+  //     });
+  // }, []); // ipapi 사용
+
+  // useEffect(() => {
+  //   fetch("http://api.ipstack.com/check?access_key=YOUR_ACCESS_KEY")
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       setLocation({
+  //         latitude: data.latitude,
+  //         longitude: data.longitude,
+  //       });
+  //     })
+  //     .catch((error) => {
+  //       console.error("Error retrieving location:", error);
+  //     });
+  // }, []); // ipstack 사용
+
   useEffect(() => {
     const container = document.getElementById("map");
     const options = {
