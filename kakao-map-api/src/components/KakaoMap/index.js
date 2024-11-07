@@ -10,34 +10,57 @@ function KakaoMap() {
     longitude: 126.570667,
   });
 
+  // geolocation - https 사용시에만 가능
   // useMemo(() => {
-  //  navigator.geolocation.getCurrentPosition((pos) => {
-  //    setLocation({
-  //      latitude: pos.coords.latitude,
-  //      longitude: pos.coords.longitude,
-  //    });
-  //  });
-  // }, [navigator.geolocation.getCurrentPosition]);
+  //   navigator.geolocation.getCurrentPosition(
+  //     (pos) => {
+  //       setLocation({
+  //         latitude: pos.coords.latitude,
+  //         longitude: pos.coords.longitude,
+  //       });
+  //     },
+  //     (err) => {
+  //       console.error("Error Code = " + err.code + " - " + err.message);
+  //     },
+  //     { enableHighAccuracy: true }
+  //   );
+  // }, []);
 
+  // useEffect(() => {
+  //   // 현재 위치를 지속적으로 추적
+  //   const watchId = navigator.geolocation.watchPosition(
+  //     (pos) => {
+  //       setLocation({
+  //         latitude: pos.coords.latitude,
+  //         longitude: pos.coords.longitude,
+  //       });
+  //     },
+  //     (err) => {
+  //       console.error("Error retrieving location:", err);
+  //     },
+  //     { enableHighAccuracy: true }
+  //   );
+
+  //   // 언마운트 시 추적 중지
+  //   return () => {
+  //     navigator.geolocation.clearWatch(watchId);
+  //   };
+  // }, []);
+
+  // https 아닌 경우 ipinfo 사용
   useEffect(() => {
-    // 현재 위치를 지속적으로 추적
-    const watchId = navigator.geolocation.watchPosition(
-      (pos) => {
+    fetch("https://ipinfo.io/json?token=df8c685e5c13b9")
+      .then((response) => response.json())
+      .then((data) => {
+        const [lat, lon] = data.loc.split(",");
         setLocation({
-          latitude: pos.coords.latitude,
-          longitude: pos.coords.longitude,
+          latitude: parseFloat(lat),
+          longitude: parseFloat(lon),
         });
-      },
-      (err) => {
-        console.error("Error retrieving location:", err);
-      },
-      { enableHighAccuracy: true }
-    );
-
-    // 언마운트 시 추적 중지
-    return () => {
-      navigator.geolocation.clearWatch(watchId);
-    };
+      })
+      .catch((error) => {
+        console.error("Error retrieving location:", error);
+      });
   }, []);
 
   useEffect(() => {
