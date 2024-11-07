@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import { useParams } from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -9,10 +10,12 @@ function SurveyPage() {
   console.log('params: ', params);
 
   return (
-    <SurveyPageWrapper>
-      <ProgressIndicator />
-      <QuestionBox />
-    </SurveyPageWrapper>
+    <Suspense fallback={<div>loading...</div>}>
+      <SurveyPageWrapper>
+        <ProgressIndicator />
+        <QuestionBox />
+      </SurveyPageWrapper>
+    </Suspense>
   );
 }
 
